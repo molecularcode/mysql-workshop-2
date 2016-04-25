@@ -1,0 +1,36 @@
+/* Exercise 4
+-----------------------------------------------------------------------
+    Modify the decodemtl_addressbook.Account row
+    Modify the decodemtl_addressbook.AddressBook row
+    Modify the three decodemtl_addressbook.Entry rows using one query only
+*/
+
+# Modify the decodemtl_addressbook.Account row
+mysql> select * from Account;
++----+---------+--------------------+---------------------+------------+
+| id | email   | password           | createdOn           | modifiedOn |
++----+---------+--------------------+---------------------+------------+
+|  1 | a@a.com | a4d83nfxkcsld&9/2u | 0000-00-00 00:00:00 | NULL       |
++----+---------+--------------------+---------------------+------------+
+
+
+# Modify the decodemtl_addressbook.AddressBook row
+mysql> UPDATE AddressBook SET accountId=1423;
+mysql> select * from AddressBook;
++----+-----------+------+---------------------+------------+
+| id | accountId | name | createdOn           | modifiedOn |
++----+-----------+------+---------------------+------------+
+|  1 |      1423 | Fred | 0000-00-00 00:00:00 | NULL       |
++----+-----------+------+---------------------+------------+
+
+
+# Modify the three decodemtl_addressbook.Entry rows using one query only
+mysql> UPDATE Entry SET contentLineFive='awesome';
+mysql> select * from Entry;
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| id | addressBookId | firstName | lastName | birthday            | type | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+|  1 |             0 | Fred      | Smith    | 0000-00-00 00:00:00 | home | phone   | 1234567890     | something      | something else   | another thing   | awesome         |
+|  2 |             0 | Albert    | Henner   | 0000-00-00 00:00:00 |      | phone   | 987654321      | something      | something else   | another thing   | awesome         |
+|  3 |             0 | George    | Wavely   | 0000-00-00 00:00:00 | work | address | street         | something      | something else   | another thing   | awesome         |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
