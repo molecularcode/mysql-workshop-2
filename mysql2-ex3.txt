@@ -1,0 +1,34 @@
+/* Exercise 3
+-----------------------------------------------------------------------
+    Retrieve data from the previously inserted decodemtl_addressbook.Account row
+    Retrieve data from the previously inserted decodemtl_addressbook.AddressBook row
+    Retrieve data from the previously inserted decodemtl_addressbook.Entry rows
+*/
+
+# Retrieve data from the previously inserted decodemtl_addressbook.Account row
+mysql> select * from Account;
++----+---------+----------+---------------------+------------+
+| id | email   | password | createdOn           | modifiedOn |
++----+---------+----------+---------------------+------------+
+|  1 | a@a.com | passw0rd | 0000-00-00 00:00:00 | NULL       |
++----+---------+----------+---------------------+------------+
+
+
+# Retrieve data from the previously inserted decodemtl_addressbook.AddressBook row
+mysql> SELECT * from AddressBook WHERE id = 1;                                     
++----+-----------+------+---------------------+------------+
+| id | accountId | name | createdOn           | modifiedOn |
++----+-----------+------+---------------------+------------+
+|  1 |         0 | Fred | 0000-00-00 00:00:00 | NULL       |
++----+-----------+------+---------------------+------------+
+
+
+# Retrieve data from the previously inserted decodemtl_addressbook.Entry rows
+mysql> SELECT * from Entry GROUP BY lastName;
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| id | addressBookId | firstName | lastName | birthday            | type | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+|  2 |             0 | Albert    | Henner   | 0000-00-00 00:00:00 |      | phone   | 987654321      | something      | something else   | another thing   | that thing      |
+|  1 |             0 | Fred      | Smith    | 0000-00-00 00:00:00 | home | phone   | 1234567890     | something      | something else   | another thing   | this thing      |
+|  3 |             0 | George    | Wavely   | 0000-00-00 00:00:00 | work | address | street         | something      | something else   | another thing   | that thing      |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
