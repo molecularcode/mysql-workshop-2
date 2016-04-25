@@ -1,0 +1,32 @@
+# Exercise 9
+# -----------------------------------------------------------------------
+# How many Accounts exist?
+# How many Address Books exist?
+# How many Address Book Entries exist?
+
+
+
+# How many Accounts exist?
+mysql> SELECT COUNT(*) FROM Account;
++----------+
+| COUNT(*) |
++----------+
+|     1000 |
++----------+
+
+
+# How many Address Books exist?
+mysql> SELECT COUNT(*) FROM AddressBook;
++----------+
+| COUNT(*) |
++----------+
+|     1100 |
++----------+
+
+# How many Address Book Entries exist?
+mysql> SELECT COUNT(*) FROM Entry;
++----------+
+| COUNT(*) |
++----------+
+|     4000 |
++----------+
