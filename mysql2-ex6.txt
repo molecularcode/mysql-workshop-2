@@ -1,0 +1,15 @@
+# Exercise 6
+# -----------------------------------------------------------------------
+# Delete decodemtl_addressbook.Account and all associated date
+
+
+# Delete decodemtl_addressbook.Account and all associated date
+mysql> DROP TABLE Account;
+
+mysql> show tables;
++----------------------------------------+
+| Tables_in_decodemtl_addressbook_import |
++----------------------------------------+
+| AddressBook                            |
+| Entry                                  |
++----------------------------------------+
