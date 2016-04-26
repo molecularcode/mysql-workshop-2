@@ -25,9 +25,11 @@ mysql> select count(*) from Entry where birthday >= '1965-01-01';
 
 
 # Which Address Book Entry is listed as being the oldest of age?
-mysql> SELECT * FROM Entry ORDER BY birthday ASC LIMIT 1;
-+------+---------------+-----------+----------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
-| id   | addressBookId | firstName | lastName | birthday            | type  | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
-+------+---------------+-----------+----------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
-| 2260 |            93 | Abigail   | Rollins  | 1945-09-02 09:21:58 | other | address | 194 Non Road   | Berlin         | Berlin           | Bolivia         | 791155          |
-+------+---------------+-----------+----------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
+mysql> select firstName, UPPER(lastName), birthday from Entry order by birthday ASC limit 3;                           
++-----------+-----------------+---------------------+
+| firstName | UPPER(lastName) | birthday            |
++-----------+-----------------+---------------------+
+| Abigail   | ROLLINS         | 1945-09-02 09:21:58 |
+| Charde    | BURNS           | 1945-09-10 14:24:33 |
+| Aiko      | VALDEZ          | 1945-09-22 20:20:14 |
++-----------+-----------------+---------------------+
