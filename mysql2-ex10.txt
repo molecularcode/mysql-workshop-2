@@ -7,7 +7,7 @@
 
 
 # How many Address Book Entries are listed as born before February 12th of 1982?
-mysql> select count(*) from Entry where birthday < '1982-02-12';
+mysql> SELECT COUNT(*) FROM Entry WHERE birthday < '1982-02-12';
 +----------+
 | count(*) |
 +----------+
@@ -16,7 +16,7 @@ mysql> select count(*) from Entry where birthday < '1982-02-12';
 
 
 # How many Address Book Entries are listed as born on or after January 1st of 1965?
-mysql> select count(*) from Entry where birthday >= '1965-01-01';
+mysql> SELECT COUNT(*) FROM Entry WHERE birthday >= '1965-01-01';
 +----------+
 | count(*) |
 +----------+
@@ -25,7 +25,7 @@ mysql> select count(*) from Entry where birthday >= '1965-01-01';
 
 
 # Which Address Book Entry is listed as being the oldest of age?
-mysql> select firstName, UPPER(lastName), birthday from Entry order by birthday ASC limit 3;                           
+mysql> SELECT firstName, UPPER(lastName) AS lastName, birthday from Entry ORDER BY birthday ASC limit 3;                           
 +-----------+-----------------+---------------------+
 | firstName | UPPER(lastName) | birthday            |
 +-----------+-----------------+---------------------+
