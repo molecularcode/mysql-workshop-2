@@ -6,11 +6,11 @@
 
 
 # How many Address Book Entries have phones starting with area code 3XX?
-mysql> SELECT COUNT(*) FROM Entry WHERE subtype='phone' AND (contentLineOne LIKE '%(3__)%' OR contentLineOne LIKE '%-3__-%');
+mysql> SELECT COUNT(*) FROM Entry WHERE subtype='phone' AND (contentLineOne LIKE '(3__)%' OR contentLineOne LIKE '1-3__-%');
 +----------+
 | COUNT(*) |
 +----------+
-|       74 |
+|       60 |
 +----------+
 
 
