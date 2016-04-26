@@ -15,14 +15,6 @@ mysql> INSERT INTO AddressBook (name) VALUES ('Fred');
 mysql> INSERT INTO Entry
     (firstName, lastName, birthday, type, subtype, contentLineOne, contentLineTwo, contentLineThree, contentLineFour, contentLineFive)
     VALUES
-    ('Fred', 'Smith', 325543854, 'home', 'phone', 1234567890, 'something', 'something else', 'another thing', 'this thing');
-
-mysql> INSERT INTO Entry
-    (firstName, lastName, birthday, type, subtype, contentLineOne, contentLineTwo, contentLineThree, contentLineFour, contentLineFive)
-    VALUES
-    ('Albert', 'Henner', 325543854000, 'word', 'phone', 0987654321, 'something', 'something else', 'another thing', 'that thing');  
-    
-mysql> INSERT INTO Entry
-    (firstName, lastName, birthday, type, subtype, contentLineOne, contentLineTwo, contentLineThree, contentLineFour, contentLineFive)
-    VALUES
+    ('Fred', 'Smith', 325543854, 'home', 'phone', 1234567890, 'something', 'something else', 'another thing', 'this thing'),
+    ('Albert', 'Henner', 325543854000, 'word', 'phone', 0987654321, 'something', 'something else', 'another thing', 'that thing'),
     ('George', 'Wavely', 325543854000, 'work', 'address', 'street', 'something', 'something else', 'another thing', 'that thing');    
