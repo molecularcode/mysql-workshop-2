@@ -22,7 +22,7 @@ prodName - VARCHAR(100)
 manufacturerComp - VARCHAR(100)
 createdAt - DATETIME
 modifiedAt - DATETIME
-inventoryNo - INT(4)
+inventoryNum - INT(4)
 
 # Customers table
 custId - INT auto_increment primary
