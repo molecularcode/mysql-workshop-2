@@ -24,7 +24,7 @@ mysql> SELECT COUNT(*) FROM Entry WHERE subtype='phone' AND contentLineOne NOT L
 
 
 # How many Address Book Entries are work phones starting with a country code?
-mysql> SELECT COUNT(*) FROM Entry WHERE subtype='phone' AND contentLineOne LIKE '1-___-%';     
+mysql> SELECT COUNT(*) FROM Entry WHERE subtype='phone' AND contentLineOne LIKE '1-%';     
 +----------+
 | COUNT(*) |
 +----------+
